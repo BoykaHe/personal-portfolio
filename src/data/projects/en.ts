@@ -2,151 +2,205 @@ import type { Project } from "@/data/types";
 
 export const projectsEn: Project[] = [
   {
-    slug: "portfolio-starter",
-    title: "Portfolio Starter",
+    slug: "formula-student-autonomous-car-path-planning-and-tracking",
+    title: "Formula Student Autonomous Car - Path Planning and Tracking Controller",
     summary:
-      "A clean, locale-aware portfolio foundation built to organise projects, experience, and future GitHub integrations.",
-    status: "building",
-    timeframe: "2026",
+      "Development work for Formula Student Artificial Intelligence focused on cone data processing, path planning, vehicle dynamics modelling, and MPC-based trajectory tracking.",
+    status: "archived",
+    timeframe: "Oct 2022 - Apr 2024",
     featured: true,
-    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    stack: [
+      "Formula Student AI",
+      "Simulink",
+      "CarSim",
+      "MPC",
+      "A* Path Planning",
+      "Vehicle Dynamics"
+    ],
     highlights: [
-      "Locale-aware App Router structure",
-      "Project detail page with tab deep links",
-      "Mock-first data layer for iterative delivery"
+      "Processed cone coordinate CSV data from the perception workflow and visualised track layouts for path analysis.",
+      "Calculated centreline waypoints using midpoint and Euclidean distance methods between yellow and blue cones.",
+      "Built a simplified 3-DOF vehicle dynamics model in Simulink to support controller development.",
+      "Combined a 7-DOF vehicle dynamics model with an MPC controller through the CarSim-Simulink simulation platform."
     ],
     responsibilities: [
-      "Planned information architecture",
-      "Defined data models and route structure",
-      "Built the minimal skeleton before visual polish"
+      "Worked as path planning and tracking engineer across Formula Student AI project work.",
+      "Developed path planning and tracking controller logic for autonomous Formula Student scenarios.",
+      "Supported autonomous driving system operation as an ADS-DV operator.",
+      "Analysed simulation behaviour against Formula Student-style dynamic constraints."
     ],
     problemSolved:
-      "Creates a professional entry point that is easier to maintain than a one-off static page and easier to evolve than a template site.",
+      "The project explored how to generate a usable racing line from perception inputs and validate a tracking controller with stable, controllable behaviour under Formula Student autonomous driving constraints.",
     cover: {
-      src: "/projects/portfolio-starter-cover.png",
-      alt: "Placeholder cover for the portfolio starter project"
+      src: "/projects/formula-student-autonomous-car-cover.png",
+      alt: "Placeholder cover for the Formula Student autonomous car project"
     },
     screenshots: [
       {
-        src: "/projects/portfolio-starter-screen-1.png",
-        alt: "Homepage placeholder screenshot"
+        src: "/projects/formula-student-autonomous-car-screen-1.png",
+        alt: "Placeholder screenshot for path planning and tracking controller work"
       }
     ],
     links: [
       {
-        label: "Live website",
-        href: "https://example.com/portfolio-starter"
-      },
-      {
-        label: "GitHub repository",
-        href: "https://github.com/your-handle/portfolio-starter"
-      },
-      {
-        label: "Clone URL",
-        href: "git@github.com:your-handle/portfolio-starter.git"
+        label: "GitHub profile",
+        href: "https://github.com/BoykaHe"
       }
     ],
     readmeSource: {
       kind: "inline",
       content: [
-        "# Portfolio Starter",
+        "# Formula Student Autonomous Car - Path Planning and Tracking Controller",
         "",
-        "This placeholder README demonstrates where markdown content will be connected later.",
+        "This project focuses on path planning and tracking control for Formula Student Artificial Intelligence scenarios.",
         "",
-        "## Goals",
+        "## Current evidence status",
         "",
-        "- Keep the site job-search focused",
-        "- Separate data from UI",
-        "- Prepare for future multilingual content"
+        "- Real project summary has been added from the CV.",
+        "- Repository, screenshots, simulation artefacts, and full technical report links are still TODO.",
+        "",
+        "## Technical areas",
+        "",
+        "- Cone coordinate processing",
+        "- Centreline waypoint generation",
+        "- A* path planning",
+        "- MPC tracking control",
+        "- Simulink and CarSim-based simulation"
       ].join("\n")
     }
   },
   {
-    slug: "github-activity-mock",
-    title: "GitHub Activity Mock",
+    slug: "design-of-cav-pod",
+    title: "Design of CAV Pod",
     summary:
-      "A mock-friendly GitHub activity section designed to swap data sources without rewriting the UI.",
-    status: "live",
-    timeframe: "2026",
+      "A connected and autonomous vehicle pod design project for the University of Leeds, covering electric shuttle concept development, chassis/suspension/steering design, sensor selection, path planning, and FMEA.",
+    status: "archived",
+    timeframe: "Sep 2023 - Dec 2023",
     featured: true,
-    stack: ["TypeScript", "UI modelling", "Mock data"],
+    stack: [
+      "CAV Design",
+      "Chassis Design",
+      "Suspension Design",
+      "Steering Design",
+      "Ansys Granta EduPack",
+      "FMEA"
+    ],
     highlights: [
-      "Standardised contribution snapshot shape",
-      "Mock data that mirrors future real data",
-      "Graceful fallback path for later API integration"
+      "Collaborated with automotive engineering peers to design an electric autonomous shuttle pod for the University of Leeds.",
+      "Contributed to chassis, suspension, and steering design decisions for the vehicle concept.",
+      "Worked on sensor selection plus path planning and trajectory tracking considerations.",
+      "Used Ansys EduPack for material selection and analysis of key vehicle components."
     ],
     responsibilities: [
-      "Defined activity snapshot structure",
-      "Mapped mock heatmap data",
-      "Prepared server-side integration seam"
+      "Owned chassis, suspension, and steering design work within the team project scope.",
+      "Supported sensor selection and autonomous driving function planning.",
+      "Contributed to material selection analysis and failure mode and effects analysis.",
+      "Helped translate a broad CAV concept into a more structured engineering design proposal."
     ],
     problemSolved:
-      "Avoids locking the UI to a temporary mock shape, which keeps the future real API integration straightforward.",
+      "The project addressed how to turn an autonomous shuttle idea into a structured engineering concept, balancing vehicle hardware design, autonomy requirements, materials, and risk analysis.",
     cover: {
-      src: "/projects/github-activity-cover.png",
-      alt: "Placeholder cover for the GitHub activity mock project"
+      src: "/projects/design-of-cav-pod-cover.png",
+      alt: "Placeholder cover for the CAV Pod design project"
     },
     screenshots: [
       {
-        src: "/projects/github-activity-screen-1.png",
-        alt: "GitHub activity placeholder screenshot"
+        src: "/projects/design-of-cav-pod-screen-1.png",
+        alt: "Placeholder screenshot for CAV Pod design work"
       }
     ],
     links: [
       {
-        label: "Live preview",
-        href: "https://example.com/github-activity-mock"
-      },
-      {
-        label: "GitHub repository",
-        href: "https://github.com/your-handle/github-activity-mock"
+        label: "Project documentation - TODO",
+        href: "https://github.com/BoykaHe"
       }
     ],
     readmeSource: {
-      kind: "local-file",
-      path: "@/content/projects/github-activity-mock.md"
+      kind: "inline",
+      content: [
+        "# Design of CAV Pod",
+        "",
+        "This project covers the conceptual design of an electric connected and autonomous shuttle pod.",
+        "",
+        "## Current evidence status",
+        "",
+        "- Real project summary has been added from the CV.",
+        "- CAD screenshots, final report, FMEA table, and design diagrams are still TODO.",
+        "",
+        "## Technical areas",
+        "",
+        "- Chassis design",
+        "- Suspension design",
+        "- Steering design",
+        "- Sensor selection",
+        "- Material selection",
+        "- FMEA"
+      ].join("\n")
     }
   },
   {
-    slug: "resume-entrypoint",
-    title: "Resume Entrypoint",
+    slug: "conceptual-design-autonomous-vehicle-self-driving-system",
+    title: "Conceptual Design of Autonomous Vehicle Self-Driving System",
     summary:
-      "A compact section concept for handing off from website narrative to resume download and contact.",
+      "A conceptual autonomous driving system architecture project covering sensor selection and fusion, path planning, and the overall software/hardware framework.",
     status: "archived",
-    timeframe: "2025",
-    featured: false,
-    stack: ["Content strategy", "UI copy", "CTA flow"],
+    timeframe: "Mar 2024",
+    featured: true,
+    stack: [
+      "Autonomous System Architecture",
+      "Sensor Selection",
+      "Sensor Fusion",
+      "Path Planning",
+      "Software/Hardware Framework"
+    ],
     highlights: [
-      "Fast contact handoff",
-      "Resume summary block",
-      "Reuse-ready layout pattern"
+      "Developed a conceptual architecture for an autonomous vehicle self-driving system.",
+      "Considered sensor selection, sensor fusion, path planning, and software/hardware framework design.",
+      "Connected high-level autonomous driving requirements to a structured system architecture."
     ],
     responsibilities: [
-      "Explored CTA ordering",
-      "Drafted concise resume summary",
-      "Prepared public asset structure"
+      "Defined the main autonomous driving system architecture.",
+      "Mapped key subsystem responsibilities across sensing, planning, and platform layers.",
+      "Prepared the concept as an engineering design artefact rather than a purely visual proposal."
     ],
     problemSolved:
-      "Makes the resume section feel connected to the rest of the site instead of acting like an isolated download button.",
+      "The project clarified how an autonomous vehicle system can be decomposed into sensing, fusion, planning, and implementation layers before moving into detailed component or algorithm development.",
     cover: {
-      src: "/projects/resume-entrypoint-cover.png",
-      alt: "Placeholder cover for the resume entrypoint project"
+      src: "/projects/autonomous-vehicle-self-driving-system-cover.png",
+      alt: "Placeholder cover for the autonomous vehicle self-driving system concept"
     },
     screenshots: [
       {
-        src: "/projects/resume-entrypoint-screen-1.png",
-        alt: "Resume section placeholder screenshot"
+        src: "/projects/autonomous-vehicle-self-driving-system-screen-1.png",
+        alt: "Placeholder screenshot for autonomous system architecture work"
       }
     ],
     links: [
       {
-        label: "Prototype note",
-        href: "https://example.com/resume-entrypoint"
+        label: "Architecture documentation - TODO",
+        href: "https://github.com/BoykaHe"
       }
     ],
     readmeSource: {
-      kind: "remote-url",
-      url: "https://example.com/readme/resume-entrypoint"
+      kind: "inline",
+      content: [
+        "# Conceptual Design of Autonomous Vehicle Self-Driving System",
+        "",
+        "This project documents the concept-level design of an autonomous vehicle self-driving system.",
+        "",
+        "## Current evidence status",
+        "",
+        "- Real project summary has been added from the CV.",
+        "- System diagrams, report excerpts, and detailed architecture documentation are still TODO.",
+        "",
+        "## Technical areas",
+        "",
+        "- Sensor selection",
+        "- Sensor fusion",
+        "- Path planning",
+        "- Software/hardware framework design",
+        "- Autonomous system decomposition"
+      ].join("\n")
     }
   }
 ];

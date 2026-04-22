@@ -22,108 +22,135 @@ export const siteContentEn: SiteContent = {
     }
   },
   profile: {
-    name: "Your Name",
-    role: "Frontend Engineer / Product-minded Builder",
-    tagline: "A focused portfolio entry point for shipping projects, communicating clearly, and building maintainable user experiences.",
-    focus: ["Next.js portfolio build", "Frontend architecture", "Job search positioning"],
-    location: "Based in China, open to remote and hybrid roles",
-    availability: "Open to frontend engineer and product engineering opportunities",
+    name: "Boyka He",
+    role: "Automotive Engineering / Autonomous Systems Project Engineer",
+    tagline:
+      "Vehicle engineering graduate focused on autonomous driving systems, path planning, tracking control, and project-oriented automotive engineering.",
+    focus: [
+      "Autonomous vehicle systems",
+      "Path planning and tracking control",
+      "Chassis, suspension, and steering design",
+      "Formula Student Artificial Intelligence"
+    ],
+    location: "Dongguan, China. Open to opportunities in Dongguan, Guangzhou, Shanghai, Beijing, Ningbo, and remote-friendly teams.",
+    availability:
+      "Open to graduate and early-career roles in autonomous systems, chassis/suspension, powertrain, automotive project management, and component design.",
     intro:
-      "This site is designed to help recruiters and collaborators understand what I am building, what I have delivered, and where to explore my work next."
+      "I am Jiawei (Boyka) He, an automotive engineering graduate with experience across Formula Student AI, connected and autonomous vehicle design, and self-driving system architecture. My work connects vehicle dynamics, simulation, control, sensor selection, and engineering project delivery."
   },
   socials: [
     {
       id: "github",
       label: "GitHub",
-      href: "https://github.com/your-handle",
+      href: "https://github.com/BoykaHe",
       kind: "external"
     },
     {
       id: "email",
       label: "Email",
-      href: "mailto:hello@example.com",
+      href: "mailto:boyka.jiawei.he@gmail.com",
       kind: "email",
-      copyValue: "hello@example.com"
+      copyValue: "boyka.jiawei.he@gmail.com"
     },
     {
       id: "linkedin",
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/your-handle",
+      href: "https://www.linkedin.com/in/jiawei-he-457542225/",
       kind: "external"
     }
   ],
   experiences: [
     {
       id: "exp-1",
-      period: "2024 - 2025",
-      role: "Frontend Developer",
-      organisation: "Portfolio Project Track",
-      location: "Remote",
+      period: "Sep 2023 - Sep 2024",
+      role: "MSc Vehicle Engineering",
+      organisation: "University of Leeds",
+      location: "Leeds, United Kingdom",
       summary:
-        "Built and iterated on personal and interview-focused projects with emphasis on structure, clarity, and measurable storytelling.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS"]
+        "Studied connected and autonomous vehicle systems, electric and hybrid powertrain engineering, chassis engineering, engineering computation, and human factors.",
+      technologies: ["CAV systems", "Powertrain", "Chassis engineering", "Engineering computation"]
     },
     {
       id: "exp-2",
-      period: "2023 - 2024",
-      role: "Project-based Engineer",
-      organisation: "Independent Practice",
-      location: "China",
+      period: "Oct 2022 - Apr 2024",
+      role: "Path Planning and Tracking Engineer / ADS-DV Operator",
+      organisation: "Brunel Autonomous Racing and Leeds Gryphon Racing AI",
+      location: "London and Leeds, United Kingdom",
       summary:
-        "Explored engineering fundamentals, UI systems, and reusable patterns through small production-style builds.",
-      technologies: ["React", "JavaScript", "Git"]
+        "Worked on Formula Student Artificial Intelligence projects covering path planning, trajectory tracking, cone data processing, and autonomous driving system operation.",
+      technologies: ["FS-AI", "Path planning", "Tracking control", "Simulink", "CarSim"]
+    },
+    {
+      id: "exp-3",
+      period: "Jul 2020 - Sep 2021",
+      role: "Manufacturing, Equipment Operation, and Quality Control",
+      organisation: "Dongguan Haoxin Electronics Co., Ltd.",
+      location: "Dongguan, China",
+      summary:
+        "Gained hands-on production experience across SMT operation, AI machine operation, equipment maintenance, functional testing, PCBA inspection, and quality control workflows.",
+      technologies: ["SMT", "AI equipment", "QC", "PCBA inspection", "Process monitoring"]
     }
   ],
   skills: [
     {
-      id: "frontend",
-      title: "Frontend",
+      id: "autonomous-systems",
+      title: "Autonomous Systems",
       order: 1,
-      items: ["Next.js", "React", "TypeScript", "Tailwind CSS"]
+      items: ["Path planning", "Trajectory tracking", "Sensor selection", "Sensor fusion", "ADS operation"]
     },
     {
-      id: "tooling",
-      title: "Tooling",
+      id: "vehicle-engineering",
+      title: "Vehicle Engineering",
       order: 2,
-      items: ["Git", "npm", "ESLint", "Vercel"]
+      items: ["Vehicle dynamics", "Chassis design", "Suspension design", "Steering design", "FMEA"]
     },
     {
-      id: "workflow",
-      title: "Workflow",
+      id: "engineering-tools",
+      title: "Engineering Tools",
       order: 3,
-      items: ["Component design", "Mock-first development", "Incremental delivery"]
+      items: [
+        "MATLAB",
+        "Python",
+        "C++",
+        "Simulink",
+        "CarSim",
+        "IPG CarMaker",
+        "Ansys",
+        "SolidWorks"
+      ]
     }
   ],
   now: [
     {
       id: "now-1",
-      title: "Building this portfolio",
+      title: "Building an automotive systems portfolio",
       description:
-        "Creating a portfolio site that is clean, job-search focused, and ready for real project content."
+        "Replacing the first portfolio skeleton content with real autonomous vehicle, CAV, and Formula Student AI project material."
     },
     {
       id: "now-2",
-      title: "Sharpening frontend fundamentals",
+      title: "Organising project evidence",
       description:
-        "Focusing on App Router, data-driven UI structure, and maintainable component architecture."
+        "Preparing clearer write-ups for path planning, tracking control, chassis/suspension design, sensor selection, and system architecture work."
     },
     {
       id: "now-3",
-      title: "Open to interviews",
+      title: "Open to engineering opportunities",
       description:
-        "Actively preparing materials for frontend and product engineering opportunities."
+        "Looking for graduate or early-career opportunities in automotive engineering, autonomous systems, vehicle systems, and project-oriented engineering teams."
     }
   ],
   resume: {
     summary:
-      "A concise resume section will live here, with a download link and a fast handoff to contact details.",
+      "MSc Vehicle Engineering graduate from the University of Leeds with project experience in Formula Student AI, autonomous shuttle design, self-driving system architecture, vehicle dynamics simulation, path planning, and tracking control.",
     downloadUrl: "/resume/resume-placeholder.txt",
     updatedAt: "2026-04",
-    contactLabel: "Reach out by email for the latest version."
+    contactLabel:
+      "Resume PDF is still a placeholder in this site. For the latest version, contact boyka.jiawei.he@gmail.com."
   },
   githubActivity: {
-    username: "your-handle",
-    rangeLabel: "Last 12 weeks",
+    username: "BoykaHe",
+    rangeLabel: "Mock activity - replace with real GitHub data later",
     totalContributions: 86,
     palette: ["#1b1f26", "#17353a", "#1b5d5a", "#2a908b", "#59d2c5"],
     weeks: [
@@ -202,14 +229,16 @@ export const siteContentEn: SiteContent = {
     ],
     repositories: [
       {
-        name: "portfolio-starter",
-        description: "A data-driven personal site starter with locale-aware routing.",
-        url: "https://github.com/your-handle/portfolio-starter"
+        name: "Formula Student AI project repository - TODO",
+        description:
+          "Placeholder card for a future repository or technical write-up covering path planning and tracking control.",
+        url: "https://github.com/BoykaHe"
       },
       {
-        name: "ui-pattern-lab",
-        description: "Small experiments around reusable UI structure and component composition.",
-        url: "https://github.com/your-handle/ui-pattern-lab"
+        name: "Autonomous vehicle systems portfolio - TODO",
+        description:
+          "Placeholder card for future project evidence, simulation files, reports, or README-based documentation.",
+        url: "https://github.com/BoykaHe"
       }
     ]
   }

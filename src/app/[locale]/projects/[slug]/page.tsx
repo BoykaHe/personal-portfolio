@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 import { SiteShell } from "@/components/layout/site-shell";
 import { ProjectOverviewTab } from "@/components/projects/project-overview-tab";
@@ -24,6 +24,13 @@ type ProjectDetailPageProps = {
 
 const allowedTabs: ProjectTabKey[] = ["overview", "readme", "website"];
 
+const legacyProjectSlugRedirects = {
+  en: {
+    "formula-student-autonomous-car-path-planning-tracking":
+      "formula-student-autonomous-car-path-planning-and-tracking"
+  }
+} as const;
+
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
     getProjects(locale).map((project) => ({
@@ -41,6 +48,16 @@ function resolveActiveTab(value?: string): ProjectTabKey {
   return "overview";
 }
 
+function resolveLegacyProjectSlug(locale: string, slug: string): string | undefined {
+  if (locale !== "en") {
+    return undefined;
+  }
+
+  return legacyProjectSlugRedirects.en[
+    slug as keyof typeof legacyProjectSlugRedirects.en
+  ];
+}
+
 export default async function ProjectDetailPage({
   params,
   searchParams
@@ -53,6 +70,13 @@ export default async function ProjectDetailPage({
   const activeTab = resolveActiveTab(tab);
 
   if (!project) {
+    const replacementSlug = resolveLegacyProjectSlug(locale, slug);
+
+    if (replacementSlug) {
+      const tabQuery = tab ? `?tab=${activeTab}` : "";
+      redirect(`/${locale}/projects/${replacementSlug}${tabQuery}`);
+    }
+
     notFound();
   }
 
@@ -79,9 +103,9 @@ export default async function ProjectDetailPage({
           </div>
 
           <div className="flex flex-wrap gap-2">
-            {project.links.map((link) => (
+            {project.links.map((link, index) => (
               <a
-                key={link.href}
+                key={`${link.href}-${link.label}-${index}`}
                 href={link.href}
                 className="rounded-full border border-white/10 px-4 py-2 text-sm text-text hover:bg-white/5"
               >
