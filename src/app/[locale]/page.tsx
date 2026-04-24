@@ -25,8 +25,8 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <SiteShell locale={locale} dictionary={site.dictionary}>
-      <SectionContainer id="intro" title={site.dictionary.nav.intro} eyebrow="Home">
-        <IntroSection profile={site.profile} />
+      <SectionContainer id="intro" title={site.dictionary.nav.intro} eyebrow="Home" variant="hero">
+        <IntroSection profile={site.profile} featuredProject={featuredProjects[0]} />
       </SectionContainer>
 
       <SectionContainer id="contact" title="Contact" eyebrow="Direct reach">

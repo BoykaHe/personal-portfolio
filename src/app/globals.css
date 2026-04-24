@@ -4,14 +4,18 @@
 
 :root {
   color-scheme: dark;
-  --color-bg: #080b0d;
-  --color-panel: #0d1215;
-  --color-line: rgba(218, 230, 236, 0.11);
-  --color-text: #edf2f5;
-  --color-muted: #8c99a3;
-  --color-accent: #6f8f86;
-  --color-accent-hover: #7d9d94;
-  --color-accent-bg-soft: rgba(111, 143, 134, 0.12);
+  --color-bg: #080a09;
+  --color-panel: #0d1110;
+  --color-panel-soft: rgba(13, 17, 16, 0.64);
+  --color-panel-strong: #121715;
+  --color-line: rgba(232, 226, 214, 0.1);
+  --color-line-strong: rgba(232, 226, 214, 0.16);
+  --color-text: #f0f2ed;
+  --color-body: #c8d0ca;
+  --color-muted: #8e9a93;
+  --color-accent: #8ea69b;
+  --color-accent-hover: #a1b8ad;
+  --color-accent-bg-soft: rgba(142, 166, 155, 0.12);
 }
 
 * {
@@ -25,7 +29,9 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: #080b0d;
+  background:
+    linear-gradient(180deg, rgba(18, 23, 21, 0.72), rgba(8, 10, 9, 0) 18rem),
+    var(--color-bg);
   color: var(--color-text);
   font-family:
     "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -37,5 +43,13 @@ a {
 }
 
 ::selection {
-  background: rgba(111, 143, 134, 0.32);
+  background: rgba(142, 166, 155, 0.32);
+}
+
+p,
+li,
+h1,
+h2,
+h3 {
+  text-wrap: pretty;
 }

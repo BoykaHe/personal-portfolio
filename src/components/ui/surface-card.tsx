@@ -9,7 +9,7 @@ export function SurfaceCard({ children, className }: SurfaceCardProps) {
   return (
     <div
       className={[
-        "rounded-md border border-line bg-panel/55 p-5 shadow-none backdrop-blur",
+        "rounded-[5px] border border-line bg-[var(--color-panel-soft)] p-5 shadow-none",
         className
       ]
         .filter(Boolean)
