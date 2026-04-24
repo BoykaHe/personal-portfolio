@@ -14,7 +14,7 @@ export function SkillsSection({ groups }: { groups: SkillGroup[] }) {
               {group.items.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-white/6 px-3 py-1 text-sm text-text/85"
+                  className="rounded-[3px] border border-line px-3 py-1 text-sm text-text/85"
                 >
                   {item}
                 </span>

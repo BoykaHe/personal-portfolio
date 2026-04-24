@@ -43,7 +43,7 @@ export function GitHubActivitySection({
           <a
             key={repo.name}
             href={repo.url}
-            className="rounded-2xl border border-white/6 bg-white/[0.02] p-4 hover:border-white/15"
+            className="rounded-[5px] border border-line bg-panel/35 p-4 transition-colors hover:border-accent/45 hover:bg-[var(--color-accent-bg-soft)]"
           >
             <p className="text-sm font-medium text-text">{repo.name}</p>
             <p className="mt-2 text-sm leading-6 text-muted">{repo.description}</p>

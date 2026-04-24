@@ -20,7 +20,7 @@ export function ExperiencesSection({ items }: { items: ExperienceItem[] }) {
                 {item.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full border border-white/6 px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted"
+                    className="rounded-[3px] border border-line px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted"
                   >
                     {tech}
                   </span>

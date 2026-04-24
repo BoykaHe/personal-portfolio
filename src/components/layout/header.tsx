@@ -11,7 +11,7 @@ type HeaderProps = {
 
 export function Header({ locale, dictionary }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-20 border-b border-white/5 bg-bg/80 backdrop-blur">
+    <header className="sticky top-0 z-20 border-b border-line bg-bg/90 backdrop-blur">
       <div className="mx-auto flex w-full max-w-content items-center justify-between gap-4 px-6 py-4">
         <Link href={`/${locale}`} className="text-sm font-semibold tracking-[0.28em] text-muted">
           YN
@@ -40,7 +40,7 @@ export function Header({ locale, dictionary }: HeaderProps) {
 
         <Suspense
           fallback={
-            <div className="rounded-full border border-line bg-panel/70 px-3 py-2 text-xs uppercase tracking-[0.24em] text-muted">
+            <div className="rounded-[4px] border border-line bg-panel/70 px-3 py-2 text-xs uppercase tracking-[0.24em] text-muted">
               {locale}
             </div>
           }

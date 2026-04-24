@@ -25,7 +25,7 @@ export function LocaleSwitcher({ currentLocale }: { currentLocale: Locale }) {
   const search = searchParams.toString();
 
   return (
-    <div className="flex items-center gap-2 rounded-full border border-line bg-panel/70 p-1 text-xs uppercase tracking-[0.24em] text-muted">
+    <div className="flex items-center gap-2 rounded-[5px] border border-line bg-panel/70 p-1 text-xs uppercase tracking-[0.24em] text-muted">
       {locales.map((locale) => {
         const active = locale === currentLocale;
 
@@ -34,8 +34,8 @@ export function LocaleSwitcher({ currentLocale }: { currentLocale: Locale }) {
             key={locale}
             href={buildLocaleHref(pathname, locale, search)}
             className={[
-              "rounded-full px-3 py-1 transition-colors",
-              active ? "bg-text text-bg" : "hover:bg-white/5"
+              "rounded-[3px] px-3 py-1 transition-colors",
+              active ? "bg-[var(--color-accent-bg-soft)] text-text" : "hover:bg-[var(--color-accent-bg-soft)]"
             ].join(" ")}
           >
             {locale}

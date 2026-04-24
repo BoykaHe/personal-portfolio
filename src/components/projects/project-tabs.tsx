@@ -24,7 +24,7 @@ export function ProjectTabs({
   ];
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <nav className="flex flex-wrap gap-7 border-b border-line" aria-label="Project dossier tabs">
       {tabs.map((tab) => {
         const active = tab.key === activeTab;
 
@@ -32,17 +32,18 @@ export function ProjectTabs({
           <Link
             key={tab.key}
             href={`/${locale}/projects/${projectSlug}?tab=${tab.key}`}
+            aria-current={active ? "page" : undefined}
             className={[
-              "rounded-full border px-4 py-2 text-sm transition-colors",
+              "border-b py-3 font-mono text-[11px] uppercase tracking-[0.2em] transition-colors focus:outline-none focus:ring-2 focus:ring-accent/20",
               active
-                ? "border-white/10 bg-text text-bg"
-                : "border-white/10 text-muted hover:bg-white/5 hover:text-text"
+                ? "border-accent text-text"
+                : "border-transparent text-muted hover:border-accent/35 hover:text-text"
             ].join(" ")}
           >
             {tab.label}
           </Link>
         );
       })}
-    </div>
+    </nav>
   );
 }

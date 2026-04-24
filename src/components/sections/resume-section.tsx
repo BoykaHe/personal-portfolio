@@ -8,10 +8,10 @@ export function ResumeSection({ resume }: { resume: ResumeInfo }) {
         <p className="text-xs uppercase tracking-[0.28em] text-muted">Resume handoff</p>
         <p className="text-base leading-7 text-muted">{resume.summary}</p>
       </div>
-      <div className="space-y-4 rounded-2xl border border-white/6 bg-white/[0.02] p-5">
+      <div className="space-y-4 rounded-[5px] border border-line bg-panel/35 p-5">
         <a
           href={resume.downloadUrl}
-          className="inline-flex rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-text transition-colors hover:bg-white/5"
+          className="inline-flex border-b border-line pb-1 font-mono text-[11px] uppercase tracking-[0.18em] text-text transition-colors hover:border-accent/60 hover:text-[var(--color-accent-hover)]"
         >
           Download placeholder
         </a>

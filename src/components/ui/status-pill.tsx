@@ -8,7 +8,7 @@ const statusMap: Record<ProjectStatus, string> = {
 
 export function StatusPill({ status }: { status: ProjectStatus }) {
   return (
-    <span className="inline-flex rounded-full border border-line px-3 py-1 text-xs uppercase tracking-[0.24em] text-muted">
+    <span className="inline-flex rounded-[3px] border border-line px-2 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
       {statusMap[status]}
     </span>
   );

@@ -7,7 +7,6 @@ import { ProjectReadmeTab } from "@/components/projects/project-readme-tab";
 import { ProjectTabs, type ProjectTabKey } from "@/components/projects/project-tabs";
 import { ProjectWebsiteTab } from "@/components/projects/project-website-tab";
 import { StatusPill } from "@/components/ui/status-pill";
-import { SurfaceCard } from "@/components/ui/surface-card";
 import { getProjectBySlug, getProjects } from "@/data/projects";
 import { getSiteContent, resolveLocale } from "@/data/site";
 import { locales } from "@/data/site/locales";
@@ -82,38 +81,109 @@ export default async function ProjectDetailPage({
 
   return (
     <SiteShell locale={locale} dictionary={site.dictionary}>
-      <div className="space-y-6">
+      <div className="space-y-8">
         <Link
           href={`/${locale}/projects`}
-          className="inline-flex text-sm text-muted hover:text-text"
+          className="inline-flex border-b border-line pb-1 font-mono text-[11px] uppercase tracking-[0.18em] text-muted hover:border-accent/60 hover:text-text"
         >
           {site.dictionary.labels.backToProjects}
         </Link>
 
-        <SurfaceCard className="space-y-5">
-          <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-            <div className="space-y-3">
-              <p className="text-xs uppercase tracking-[0.28em] text-muted">{project.timeframe}</p>
-              <h1 className="text-3xl font-semibold tracking-tight text-text md:text-4xl">
+        <section className="grid gap-8 border-y border-line py-8 lg:grid-cols-[minmax(0,1.38fr)_minmax(18rem,0.62fr)]">
+          <div className="space-y-7">
+            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+              Technical dossier cover
+            </p>
+            <div className="space-y-4">
+              <h1 className="max-w-4xl text-4xl font-medium leading-[1.04] text-text md:text-6xl">
                 {project.title}
               </h1>
-              <p className="max-w-3xl text-base leading-7 text-muted">{project.summary}</p>
+              <p className="max-w-3xl text-base leading-8 text-muted">{project.summary}</p>
             </div>
-            <StatusPill status={project.status} />
+
+            <div className="grid gap-5 border-l border-accent/45 pl-5 md:grid-cols-2">
+              <div>
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+                  Thesis
+                </p>
+                <p className="mt-2 text-sm leading-7 text-text/85">{project.problemSolved}</p>
+              </div>
+              <div>
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+                  Contribution
+                </p>
+                <ul className="mt-2 space-y-2 text-sm leading-7 text-text/85">
+                  {project.responsibilities.slice(0, 2).map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <div className="flex flex-wrap gap-2">
-            {project.links.map((link, index) => (
-              <a
-                key={`${link.href}-${link.label}-${index}`}
-                href={link.href}
-                className="rounded-full border border-white/10 px-4 py-2 text-sm text-text hover:bg-white/5"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </SurfaceCard>
+          <aside className="border-y border-line lg:border-l lg:border-y-0 lg:pl-5">
+            <div className="divide-y divide-line">
+              <div className="py-4">
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+                  Status
+                </p>
+                <div className="mt-3">
+                  <StatusPill status={project.status} />
+                </div>
+              </div>
+              <div className="py-4">
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+                  Timeframe
+                </p>
+                <p className="mt-2 font-mono text-xs uppercase tracking-[0.16em] text-text/85">
+                  {project.timeframe}
+                </p>
+              </div>
+              <div className="py-4">
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+                  Links
+                </p>
+                <div className="mt-3 flex flex-col items-start gap-2">
+                  {project.links.map((link, index) => (
+                    <a
+                      key={`${link.href}-${link.label}-${index}`}
+                      href={link.href}
+                      className="border-b border-line pb-1 font-mono text-[11px] uppercase tracking-[0.16em] text-text transition-colors hover:border-accent/60 hover:text-[var(--color-accent-hover)]"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+              <div className="py-4">
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+                  Stack
+                </p>
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {project.stack.slice(0, 6).map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-[3px] border border-line px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <div className="grid gap-4 border-b border-line pb-6 md:grid-cols-3">
+          {project.highlights.slice(0, 3).map((item, index) => (
+            <div key={item} className="border-l border-line pl-4">
+              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+                Evidence {index + 1}
+              </p>
+              <p className="mt-2 text-sm leading-7 text-text/85">{item}</p>
+            </div>
+          ))}
+        </div>
 
         <ProjectTabs
           activeTab={activeTab}
